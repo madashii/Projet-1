@@ -6,4 +6,7 @@
     --darkTwoColor: #A80000;
     --fontColorLight: #FFF;
     --fontColorDark: #000;
+    
+    /* Var quizz */
+    --width-quizz: 40%;
 }
