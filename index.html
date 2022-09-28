@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nav barre</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -100,6 +103,42 @@
             <article>
 
             </article>
+            <div class="quizz">
+                <div class="quizz-question">
+                    <div class="question">
+                        <p id="question-text">Question</p>
+                    </div>
+                </div>
+                <div class="quizz-start"></div> <!--Div à cacher si on commence le quizz-->
+                <div class="quizz-health"></div> <!--Div à cacher si le quizz n'a pas commencer-->
+                <div class="quizz-clauses"> <!--Div à cacher si le quizz n'a pas commencer-->
+                    <div id="choice1" class="quizz-clauses-card">
+                        <div class="quizz-clauses-card-text">
+                            <p id="choice1-text">Choix 1</p>
+                        </div>
+                    </div>
+                    <div id="choice2" class="quizz-clauses-card">
+                        <div class="quizz-clauses-card-text">
+                            <p id="choice2-text">Choix 2</p>
+                        </div>
+                    </div>
+                    <div id="choice3" class="quizz-clauses-card">
+                        <div class="quizz-clauses-card-text">
+                            <p id="choice3-text">Choix 3</p>
+                        </div>
+                    </div>
+                    <div id="choice4" class="quizz-clauses-card">
+                        <div class="quizz-clauses-card-text">
+                            <p id="choice4-text">Choix 4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quizz-footer">
+                    <div class="quizz-footer-timer">
+                        <p id="time">0</p>
+                    </div>
+                </div><!--Div à cacher si le quizz n'a pas commencer-->
+            </div>
         </section>
         <section id="form-contact">
             <h2>CONTACT</h2>
@@ -120,6 +159,7 @@
         </section>
     </main>
     <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/quizz.js"></script>
 </body>
 
 </html>
