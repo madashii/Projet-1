@@ -1,11 +1,3 @@
-:root{
-    --width-quizz: 40%;
-}
-
-body{
-    background-color:#dadada;
-}
-
 .quizz{
     margin:0;
     padding:0;
