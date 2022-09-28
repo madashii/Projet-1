@@ -17,7 +17,16 @@ main section:nth-of-type(2n+1){
 }
 main section h2 {
     background-color: var(--greyColor);
+    padding: 2rem 1rem;
     margin-top: 0;
+}
+.title-type-01 {
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: var(--fontColorLight);
+    width: 80%;
+}
+.title-type-02 {
+    background-color: var(--lightColor);
 }
 /* Partie ACCUEIL */
 #section-background {
@@ -25,13 +34,23 @@ main section h2 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
-    height: 317px;
     box-shadow: inset 0 -50px 50px 0 #000;
+    height: 317px;
+    width: 100%;
+    position: relative;
+    margin-top: 72px;
 }
 #section-background h1 {
     color: var(--fontColorLight);
+    margin: 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 1.3rem;
 }   
 /* Partie INTRO Satoshi */
+#article-satoshi {
+    
+}
 .portrait-satoshi {
     border-radius: 50%;
     height: 5rem;
@@ -41,8 +60,5 @@ main section h2 {
 /* Partie OEUVRES */
 /* Partie QUIZ */
 /* Partie CONTACT */
-
-
-
 
 /*         End Main Part         */
