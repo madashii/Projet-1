@@ -8,9 +8,18 @@ body{
     font-family: sans-serif;
 }
 /*         Main Part         */
+/* All section basics settings */
 main section {
-    
+    background-color: var(--lightColor);
 }
+main section:nth-of-type(2n+1){
+    background-color: var(--darkColor);
+}
+main section h2 {
+    background-color: var(--greyColor);
+    margin-top: 0;
+}
+/* Partie ACCUEIL */
 #section-background {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);
     background-repeat: no-repeat;
@@ -21,8 +30,19 @@ main section {
 }
 #section-background h1 {
     color: var(--fontColorLight);
-}
+}   
+/* Partie INTRO Satoshi */
 .portrait-satoshi {
     border-radius: 50%;
     height: 5rem;
 }
+/* Partie JEUNESSE */
+/* Partie PARCOURS PROFESSIONNEL */
+/* Partie OEUVRES */
+/* Partie QUIZ */
+/* Partie CONTACT */
+
+
+
+
+/*         End Main Part         */
