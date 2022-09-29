@@ -19,7 +19,6 @@ main section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 main section:nth-of-type(2n+1){
     background-color: var(--darkColor);
@@ -33,10 +32,10 @@ main section h2 {
 }
         /* Positionnement des pokebanners */
 .poke-image-left {
-    height: 9.4rem;
-    width: 9.4rem;
+    min-height: 9.4rem;
+    min-width: 9.4rem;
     position: absolute;
-    left: 5%;
+    left: 0;
 }
 .poke-image-right {
     height: 9.4rem;
@@ -49,30 +48,43 @@ main section h2 {
     background-image: url(../assets/pokemon-pikachu.png);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -2.5rem;
+    margin-right: 0.5rem;
 }
 #poke-ptitard {
     background-image: url(../assets/pokemon-ptitard.png);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -2.8rem;
+    margin-left: 2.5rem;
 }
 #poke-porygon {
     background-image: url(../assets/pokemon-porygon.png);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -5rem;
 }
 #poke-rondoudou {
     background-image: url(../assets/pokemon-rondoudou.png);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -3.8rem;
+    margin-left: 4.3rem;
 }
 #poke-dracaufeu {
     background-image: url(../assets/pokemon-dracaufeu.png);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 12rem;
+    width: 12rem;
+    margin-top: -2.8rem;
+    margin-right: 1rem;
 }
 #poke-new {
     background-image: url(../assets/pokemon-new.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -1.5rem;
 }
         /* paramètres des images */
 img {
@@ -91,6 +103,7 @@ p {
     margin-right: 20%;
     text-align: start;
 }
+    /* modif des h2 aligné à droite  */
 .title-type-02 {
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: var(--lightColor);
@@ -116,7 +129,10 @@ p {
 }
 #section-background h1 {
     color: var(--fontColorLight);
+    font-style: italic;
+    font-size: 2rem;
     margin: 0;
+    text-align: start;
     position: absolute;
     bottom: 1rem;
     left: 1.3rem;
@@ -146,8 +162,8 @@ p {
 .cite-porygon {
     font-size: 0.8rem;
     text-align: start;
-    margin-left: 2.5rem;
-    
+    margin-left: 2%;
+    max-width: 70%;
 }
 #portrait-shigeru {
     border-radius: 50%;
