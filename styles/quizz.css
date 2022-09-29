@@ -36,11 +36,6 @@
     padding:0 20px;
 }
 
-.quizz-clauses-card-text:hover{
-    text-shadow: 3px 3px 2px grey;
-    color:green;
-}
-
 .progress-bar{
     margin:auto;
     width:var(--width-quizz);
