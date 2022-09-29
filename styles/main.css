@@ -143,6 +143,12 @@ p {
 /* Partie JEUNESSE */
 
 /* Partie PARCOURS PROFESSIONNEL */
+.cite-porygon {
+    font-size: 0.8rem;
+    text-align: start;
+    margin-left: 2.5rem;
+    
+}
 #portrait-shigeru {
     border-radius: 50%;
     height: 200px;
