@@ -19,7 +19,7 @@ main section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    position: relative;
+    
 }
 main section:nth-of-type(2n+1){
     background-color: var(--darkColor);
@@ -32,7 +32,49 @@ main section h2 {
     font-size: 1rem;
 }
         /* Positionnement des pokebanners */
-
+.poke-image-left {
+    height: 9.4rem;
+    width: 9.4rem;
+    position: absolute;
+    left: 15%;
+}
+.poke-image-right {
+    height: 9.4rem;
+    width: 9.4rem;
+    position: absolute;
+    right: 15%;
+}
+        /* Insertion des pokémons */
+#poke-pikachu {
+    background-image: url(../assets/pokemon-pikachu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+#poke-ptitard {
+    background-image: url(../assets/pokemon-ptitard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-porygon {
+    background-image: url(../assets/pokemon-porygon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-rondoudou {
+    background-image: url(../assets/pokemon-rondoudou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-dracaufeu {
+    background-image: url(../assets/pokemon-dracaufeu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-new {
+    background-image: url(../assets/pokemon-new.png);
+    background-size: contain;
+}
 img {
     width: 100%;
 }
