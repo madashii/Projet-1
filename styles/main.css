@@ -5,12 +5,16 @@
 body{
     margin: 0;
     padding: 0;
+    font-size: 16px;
     font-family: sans-serif;
 }
 /*         Main Part         */
 /* All section basics settings */
 main section {
     background-color: var(--lightColor);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 main section:nth-of-type(2n+1){
     background-color: var(--darkColor);
@@ -20,22 +24,38 @@ main section h2 {
     padding: 2rem 1rem;
     margin-top: 0;
 }
+img {
+    width: 100%;
+}
+            /* settings des paragraphes globale*/
+p {
+    margin: 0;
+    padding: 0.5rem 1rem 2.5rem 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+}
 .title-type-01 {
     border-radius: 0 0.5rem 0.5rem 0;
     color: var(--fontColorLight);
-    width: 80%;
+    margin-right: 20%;
+    margin-top: 2rem;
+    text-align: start;
 }
 .title-type-02 {
+    border-radius: 0.5rem 0 0 0.5rem;
     background-color: var(--lightColor);
+    margin-left: 20%;
+    margin-top: 2rem;
+    text-align: end;
 }
 /* Partie ACCUEIL */
 #section-background {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
+    background-position-y: 25%;
+    background-size: cover;
     box-shadow: inset 0 -50px 50px 0 #000;
-    height: 317px;
+    min-height: 245px;
     width: 100%;
     position: relative;
     margin-top: 72px;
@@ -51,10 +71,16 @@ main section h2 {
 #article-satoshi {
     
 }
+.satoshi-container {
+    display: flex;
+}
 .portrait-satoshi {
     border-radius: 50%;
-    height: 5rem;
+    padding: 0 2rem;
+    height: 8rem;
+    width: auto;
 }
+
 /* Partie JEUNESSE */
 /* Partie PARCOURS PROFESSIONNEL */
 /* Partie OEUVRES */
