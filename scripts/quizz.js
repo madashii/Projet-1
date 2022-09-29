@@ -25,7 +25,7 @@ const questions = [
 //FCT TO DISPLAY LIFE 
 const displayHealth = (healthNumber) => {
     const healthBar = document.querySelector(".quizz-health");
-    healthBar.style.background = `url(\"./assets/quizz/healthBar/${healthNumber}.png\") no-repeat`; // on choisit l'image en fonction du nombre de pokeballs
+    healthBar.style.background = `url(\"./assets/quizz/healthbar/${healthNumber}.png\") no-repeat`; // on choisit l'image en fonction du nombre de pokeballs
     healthBar.style.backgroundSize = "cover";
 }
 
