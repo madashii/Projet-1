@@ -19,7 +19,37 @@ const questions = [
         id:3,
         question:"Lequel de ces Pokémons ne fait pas partie de la première génération ?",
         clauses:[{text:"Caninos",correct:false},{text:"Dodrio",correct:false},{text:"Artikodin",correct:false},{text:"Wattouat",correct:true}]
-    }
+    },
+    {
+        id:4,
+        question:"Quel pokémon est le numéro 1 dans le pokédex ?",
+        clauses:[{text:"Pikachu",correct:false},{text:"Bulbizarre",correct:true},{text:"Carapuce",correct:false},{text:"Roucool",correct:false}]
+    },
+    {
+        id:5,
+        question:"Dans la première saison du dessin animé Pokémon, dans quelle ligue se trouve les héros ?",
+        clauses:[{text:"Johto",correct:false},{text:"Sinnoh",correct:false},{text:"Indigo",correct:true},{text:"Unys",correct:false}]
+    },
+    {
+        id:6,
+        question:"Quel est le badge donné par Ondine en tant que championne Pokémon ?",
+        clauses:[{text:"Terre",correct:false},{text:"Cascade",correct:true},{text:"Océan",correct:false},{text:"Volcan",correct:false}]
+    },
+    {
+        id:7,
+        question:"Sous quel nom est connu le personnage de Sacha en version anglaise ?",
+        clauses:[{text:"Sam",correct:false},{text:"Ash",correct:true},{text:"Sato",correct:false},{text:"Ketch",correct:false}]
+    },
+    {
+        id:8,
+        question:"Quel est l’âge de Sacha lorsqu’il commence sa quête pour devenir un maître Pokémon ?",
+        clauses:[{text:"8 ans",correct:false},{text:"10 ans",correct:true},{text:"12 ans",correct:false},{text:"14 ans",correct:false}]
+    },
+    {
+        id:9,
+        question:"Quelle est l’évolution de Fantominus ?",
+        clauses:[{text:"Ectoplasma",correct:false},{text:"Ténéfix",correct:false},{text:"Spectrum",correct:true},{text:"Marshadow",correct:false}]
+    },
 ]
 
 //FCT TO DISPLAY LIFE 
@@ -146,12 +176,17 @@ cards.forEach((card) => { // on boucle sur chaque bouton
                 displayGreyCards(); // on reset les boutons
                 displayQuestionClauses(questions,currentQuestion,currentQuestion); //on affiche une nouvelle question
             }
-            if(currentQuestion === questions.length){ //si on est à la dernière question
+            if(currentQuestion === questions.length || currentHealth===0 ){ //si on est à la dernière question
                 quizzStarted(false); //on arrête le quizz
                 startButton.style.background = `url(\"./assets/quizz/restart.webp\") no-repeat`;
                 startButton.style.backgroundSize = "cover";
-                textQuestion.innerHTML = `Fin du quizz ! Tu as eu ${6-currentHealth} ${6-currentHealth <= 1 ? "mauvaise réponse" : "mauvaises réponses"} sur ${questions.length}!`;
-                //music.pause();
+                if (currentHealth === 0) {
+                    textQuestion.innerHTML = "Tu n'as plus de vie !";
+                }
+                else{
+                    textQuestion.innerHTML = `Fin du quizz ! Tu as eu ${6-currentHealth} ${6-currentHealth <= 1 ? "mauvaise réponse" : "mauvaises réponses"} sur ${questions.length}!`;
+                }
+                    //music.pause();
                 //music.currentTime = 0;
                 currentQuestion = 1; // on reset
                 currentHealth = 6; // on reset
