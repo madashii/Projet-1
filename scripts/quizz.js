@@ -32,7 +32,12 @@ const displayHealth = (healthNumber) => {
 //FCT TO DISPLAY QUESTION
 const displayQuestion = (questions,questionNumber) => {
     const question = document.querySelector("#question-text");
-    question.innerHTML = questionNumber+1+"/"+questions.length+" "+questions[questionNumber].question; // on affiche la question
+    question.innerHTML = questions[questionNumber].question; // on affiche la question
+}
+
+const displayNumberQuestion = (questions,currentQuestion) => {
+    const numberQuestion = document.querySelector("#number-question");
+    numberQuestion.innerHTML = currentQuestion+1+"/"+questions.length; // on affiche le numéro de la question
 }
 
 //FCT TO DISPLAY CLAUSES
@@ -44,9 +49,10 @@ const displayClauses = (questions,questionNumber) =>{
 }
 
 // FCT TO DISPLAY QUESTION+CLAUSES
-const displayQuestionClauses = (questions,questionNumber) => {
+const displayQuestionClauses = (questions,questionNumber,currentQuestion) => {
     displayQuestion(questions,questionNumber); //on affiche la question
     displayClauses(questions,questionNumber); //on affiche les clauses
+    displayNumberQuestion(questions,currentQuestion); //on affiche le numéro de la question
 }
 
 // FCT TO DISPLAY GOOD ANSWER
@@ -115,7 +121,7 @@ const startButton = document.querySelector(".quizz-start");
 startButton.addEventListener("click", () => { // quand on appuie sur start
     quizzStarted(true); // on commence le quizz
     displayHealth(6); // on affiche les 6 vies de départ
-    displayQuestionClauses(questions,0); // on affiche la première question
+    displayQuestionClauses(questions,0,0); // on affiche la première question
     //music.play();
 
 });
@@ -136,7 +142,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
         setTimeout(() => { //au bout de 3 secondes
             if(currentQuestion < questions.length){ // si il reste des questions
                 displayGreyCards(); // on reset les boutons
-                displayQuestionClauses(questions,currentQuestion); //on affiche une nouvelle question
+                displayQuestionClauses(questions,currentQuestion,currentQuestion); //on affiche une nouvelle question
             }
             currentQuestion++;
             if(currentQuestion === questions.length){ //si on est à la dernière question
