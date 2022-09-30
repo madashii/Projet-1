@@ -4,3 +4,11 @@ const menuPokeball = document.querySelector(".menu-poke")
     menuPokeball.addEventListener('click',()=>{
     navLinks.classList.toggle('mobile-menu')
     })
+
+
+
+
+   
+
+
+  
