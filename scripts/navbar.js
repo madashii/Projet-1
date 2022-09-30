@@ -7,10 +7,7 @@ const menuPokeball = document.querySelector(".menu-poke")
 
 
 
-   window.addEventListener("scroll", function(){
-    navbar = document.querySelector("navbar");
-    header.classList.toggle("sticky", window.scrollY > 0);
-   })
+
    
 
 
