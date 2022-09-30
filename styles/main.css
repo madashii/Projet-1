@@ -5,5 +5,137 @@
 body{
     margin: 0;
     padding: 0;
+    font-size: 16px;
     font-family: sans-serif;
+    z-index: 0;
 }
+/*         Main Part         */
+main {
+    width: 100%;
+}
+/* All section basics settings */
+main section {
+    background-color: var(--lightColor);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+main section:nth-of-type(2n+1){
+    background-color: var(--darkColor);
+}
+main section h2 {
+    background-color: var(--greyColor);
+    padding: 1.5rem 0 1.5rem 1rem;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+        /* Positionnement des pokebanners */
+.poke-image-left {
+    height: 9.4rem;
+    width: 9.4rem;
+    position: absolute;
+    left: 15%;
+}
+.poke-image-right {
+    height: 9.4rem;
+    width: 9.4rem;
+    position: absolute;
+    right: 15%;
+}
+        /* Insertion des pokémons */
+#poke-pikachu {
+    background-image: url(../assets/pokemon-pikachu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+#poke-ptitard {
+    background-image: url(../assets/pokemon-ptitard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-porygon {
+    background-image: url(../assets/pokemon-porygon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-rondoudou {
+    background-image: url(../assets/pokemon-rondoudou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-dracaufeu {
+    background-image: url(../assets/pokemon-dracaufeu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#poke-new {
+    background-image: url(../assets/pokemon-new.png);
+    background-size: contain;
+}
+img {
+    width: 100%;
+}
+            /* settings des paragraphes globale*/
+p {
+    margin: 0;
+    padding: 0.5rem 1rem 2.5rem 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+}
+.title-type-01 {
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: var(--fontColorLight);
+    margin-right: 20%;
+    text-align: start;
+}
+.title-type-02 {
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var(--lightColor);
+    margin-left: 20%;
+    margin-top: 2rem;
+    text-align: end;
+}
+/* Partie ACCUEIL */
+#section-background {
+    background-image: url(../assets/bg-satoshi-tajiri.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 25%;
+    background-size: cover;
+    box-shadow: inset 0 -50px 50px 0 #000;
+    min-height: 15.3rem;
+    width: 100%;
+    position: relative;
+    margin-top: 72px;
+}
+#section-background h1 {
+    color: var(--fontColorLight);
+    margin: 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 1.3rem;
+}   
+/* Partie INTRO Satoshi */
+
+.satoshi-container {
+    display: flex;
+}
+.portrait-satoshi {
+    border-radius: 50%;
+    padding: 0 2rem;
+    height: 8rem;
+    width: auto;
+}
+
+/* Partie JEUNESSE */
+/* Partie PARCOURS PROFESSIONNEL */
+/* Partie OEUVRES */
+/* Partie QUIZ */
+#zone-quiz{
+    padding:2rem 0;
+}
+/* Partie CONTACT */
+
+/*         End Main Part         */
