@@ -140,11 +140,12 @@ cards.forEach((card) => { // on boucle sur chaque bouton
             textQuestion.innerHTML = "Mauvaise réponse !";
         }
         setTimeout(() => { //au bout de 3 secondes
+            console.log(currentQuestion);
+            console.log(questions.length);
             if(currentQuestion < questions.length){ // si il reste des questions
                 displayGreyCards(); // on reset les boutons
                 displayQuestionClauses(questions,currentQuestion,currentQuestion); //on affiche une nouvelle question
             }
-            currentQuestion++;
             if(currentQuestion === questions.length){ //si on est à la dernière question
                 quizzStarted(false); //on arrête le quizz
                 startButton.style.background = `url(\"./assets/quizz/restart.webp\") no-repeat`;
@@ -155,6 +156,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
                 currentQuestion = 1; // on reset
                 currentHealth = 6; // on reset
             }
+            currentQuestion++;
         }, 3000);
     })
 })
