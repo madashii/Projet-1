@@ -1,4 +1,4 @@
-/*             Reset settings             */
+
 *{
     box-sizing: border-box;
 }
@@ -125,7 +125,6 @@ p {
     min-height: 15.3rem;
     width: 100%;
     position: relative;
-    margin-top: 72px;
 }
 #section-background h1 {
     color: var(--fontColorLight);
