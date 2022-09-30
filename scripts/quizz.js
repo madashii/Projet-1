@@ -173,7 +173,6 @@ cards.forEach((card) => { // on boucle sur chaque bouton
             console.log(currentQuestion);
             console.log(questions.length);
             if(currentQuestion < questions.length){ // si il reste des questions
-                displayGreyCards(); // on reset les boutons
                 displayQuestionClauses(questions,currentQuestion,currentQuestion); //on affiche une nouvelle question
             }
             if(currentQuestion === questions.length || currentHealth===0 ){ //si on est à la dernière question
@@ -191,6 +190,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
                 currentQuestion = 1; // on reset
                 currentHealth = 6; // on reset
             }
+            displayGreyCards(); // on reset les boutons
             currentQuestion++;
         }, 3000);
     })
