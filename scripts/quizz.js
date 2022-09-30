@@ -25,7 +25,7 @@ const questions = [
 //FCT TO DISPLAY LIFE 
 const displayHealth = (healthNumber) => {
     const healthBar = document.querySelector(".quizz-health");
-    healthBar.style.background = `url(\"./assets/quizz/healthbar/${healthNumber}.png\") no-repeat`; // on choisit l'image en fonction du nombre de pokeballs
+    healthBar.style.background = `url(\"./assets/quizz/healthbar/${healthNumber}.webp\") no-repeat`; // on choisit l'image en fonction du nombre de pokeballs
     healthBar.style.backgroundSize = "cover";
 }
 
@@ -56,11 +56,11 @@ const displayGoodAnswer = (questions,questionNumber) => {
         const card = document.querySelector(`#choice${i+1}`);
         if(questions[questionNumber].clauses[i].correct){ // si la clause est correcte on affiche la carte verte
             clause.style.color = "#417028";
-            card.style.background = `url(\"./assets/quizz/cards/green_card.png\") no-repeat`;
+            card.style.background = `url(\"./assets/quizz/cards/green_card.webp\") no-repeat`;
         }
         else{
             clause.style.color = "#7B1F1F";
-            card.style.background = `url(\"./assets/quizz/cards/red_card.png\") no-repeat`;
+            card.style.background = `url(\"./assets/quizz/cards/red_card.webp\") no-repeat`;
         }
         card.style.backgroundSize = "cover";
     }
@@ -72,7 +72,7 @@ const displayGreyCards = () => {
         const clause = document.querySelector(`#choice${i+1}-text`);
         clause.style.color = "black";
         const card = document.querySelector(`#choice${i+1}`);
-        card.style.background = `url(\"./assets/quizz/cards/grey_card.png\") no-repeat`;
+        card.style.background = `url(\"./assets/quizz/cards/grey_card.webp\") no-repeat`;
         card.style.backgroundSize = "cover";
     }
 }
@@ -141,7 +141,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
             currentQuestion++;
             if(currentQuestion === questions.length){ //si on est à la dernière question
                 quizzStarted(false); //on arrête le quizz
-                startButton.style.background = `url(\"./assets/quizz/restart.png\") no-repeat`;
+                startButton.style.background = `url(\"./assets/quizz/restart.webp\") no-repeat`;
                 startButton.style.backgroundSize = "cover";
                 textQuestion.innerHTML = `Fin du quizz ! Tu as eu ${6-currentHealth} ${6-currentHealth <= 1 ? "mauvaise réponse" : "mauvaises réponses"} sur ${questions.length}!`;
                 //music.pause();
