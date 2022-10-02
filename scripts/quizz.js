@@ -157,8 +157,13 @@ startButton.addEventListener("click", () => { // quand on appuie sur start
 });
 
 const cards = document.querySelectorAll(".quizz-clauses-card"); // on récupère les 4 boutons
+let disableCardClick = false; // on bloque la possiblité d'appuyer sur les cards
 cards.forEach((card) => { // on boucle sur chaque bouton
     card.addEventListener("click",() => { // si on clique sur un des boutons
+        if(disableCardClick){ 
+            return; // on ne fait rien
+        }
+
         const textQuestion = document.querySelector("#question-text");
         displayGoodAnswer(questions,currentQuestion-1); //on affiche les bonnes réponses
         if(isGoodAnswer(questions,currentQuestion-1,card.id[6]-1)){ //si la réponse est bonne
@@ -169,6 +174,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
             displayHealth(currentHealth); //on enlève une vie
             textQuestion.innerHTML = "Mauvaise réponse !";
         }
+        disableCardClick = true; // on bloque la possibilité de cliquer sur les cartes
         setTimeout(() => { //au bout de 3 secondes
             console.log(currentQuestion);
             console.log(questions.length);
@@ -192,6 +198,7 @@ cards.forEach((card) => { // on boucle sur chaque bouton
             }
             displayGreyCards(); // on reset les boutons
             currentQuestion++;
+            disableCardClick = false; // on débloque la possibilité de cliquer sur les cartes
         }, 3000);
     })
 })
