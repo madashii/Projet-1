@@ -2,7 +2,16 @@ let facts = ["Le Pokémon le plus puissant est Mewtwo, avec 800 points de statis
 
 const displayPopup = (isDisplay) => {
     const popup = document.querySelector('.modal-popup');
-    isDisplay ? popup.style.display = "flex" : popup.style.display = "none";
+    switch (isDisplay){
+        case true:
+            popup.style.display = 'block';
+            setTimeout(() => {
+                displayPopup(false);
+            }, 5000);
+            break;
+        case false:
+            popup.style.display = 'none';
+    } 
 }
 
 const displayFact = (facts) => {
@@ -14,6 +23,7 @@ const buttonClosePopup = document.querySelector('.modal-popup-header-closebutton
 buttonClosePopup.addEventListener('click', () => {
     displayPopup(false);
 });
+
 
 
 displayFact(facts);
