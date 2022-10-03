@@ -4,13 +4,14 @@ const displayPopup = (isDisplay) => {
     const popup = document.querySelector('.modal-popup');
     switch (isDisplay){
         case true:
-            popup.style.display = 'block';
+            displayFact(facts);
+            popup.classList.add('modal-popup-display'); 
             setTimeout(() => {
-                displayPopup(false);
-            }, 5000);
+                popup.classList.remove('modal-popup-display');
+            }, 8000);
             break;
         case false:
-            popup.style.display = 'none';
+            popup.classList.remove('modal-popup-display');
     } 
 }
 
@@ -26,5 +27,5 @@ buttonClosePopup.addEventListener('click', () => {
 
 
 
-displayFact(facts);
+
 displayPopup(true);

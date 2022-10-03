@@ -1,20 +1,19 @@
 .modal-popup{
+    height: 0;
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    height: auto;
     bottom: 5%;
-    right: 1%;
-    width: calc(90vw - 2vw);
+    right: -90%;
+    width: 90%;
     height:auto;
+    overflow: hidden;
+    border-radius: 10px;
     z-index: 9;
     -webkit-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
-    box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);  
-    padding:0;  
-    margin:0;
-    transition : all ease-in-out 0.5s;
+    box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
     background-color:#00c060;
+    max-width:400px;
+    transition: right ease-in-out 1s;
 }
 
 .modal-popup-header h2, .modal-popup-content p{
@@ -28,7 +27,7 @@
 
 .modal-popup-header{
     background-color:#00a050;
-    padding:0.5rem;
+    padding:0.5rem 1rem;
     display:flex;
     justify-content: space-between;
 }
@@ -53,8 +52,27 @@
     line-height: 1.5;
 }
 
-.progress-bar{
-    width:0%;
+.progress-bar-wrapper {
     height:5px;
-    background-color:05CF0B;
+    position: relative;
+}
+.progress-bar{
+    width:0;
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    background-color:#05CF0B;
+    transition: width ease-in-out 8s;
+}
+
+
+.modal-popup-display {
+    right:1%;
+    
+}
+
+/* When modal is displayed, animate progress bar */
+.modal-popup-display .progress-bar{
+    width:100%;
 }
