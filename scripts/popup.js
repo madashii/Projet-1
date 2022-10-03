@@ -28,4 +28,3 @@ buttonClosePopup.addEventListener('click', () => {
 
 
 
-displayPopup(true);
