@@ -12,11 +12,9 @@ body{
 /*         Main Part         */
 main {
     width: 100%;
-    padding-top: 1rem;
+    min-width:320px;
+    padding-top: 2.8rem;
     /* padding-top relative à la taille de la navbar A FAIRE */
-}
-@media screen and (min-width: 600px) {
-    main {display: none;}
 }
 /* All section basics settings */
 main section {
@@ -34,18 +32,40 @@ main section h2 {
     margin: 1.5rem 0 2rem 0;
     font-weight: 400;
     font-size: 1rem;
+    z-index: 5;
 }
-        /* Positionnement des pokebanners */
-.poke-image-left {
+    /* paramètres des images */
+img {
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    main img { 
+        width: 30rem;
+        border-radius: 5%;
+    }
+}
+@media screen and (min-width: 900px) {
+    main img { 
+        width: 15.5rem;
+    }
+}
+            /* settings des paragraphes globale*/
+p {
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+    margin: 2rem 3rem 4rem;
+}
+    /* Positionnement des pokemons */
+.poke-image-left, .poke-image-right {
+    position: absolute;
     min-height: 9.4rem;
     min-width: 9.4rem;
-    position: absolute;
+    z-index: 10;
+}
+.poke-image-left {
     left: 0;
 }
 .poke-image-right {
-    height: 9.4rem;
-    width: 9.4rem;
-    position: absolute;
     right: 0;
 }
         /* Insertion des pokémons */
@@ -55,6 +75,7 @@ main section h2 {
     background-repeat: no-repeat;
     margin-top: -2.5rem;
     margin-right: 0.5rem;
+    margin-left: auto;
 }
 #poke-ptitard {
     background-image: url(../assets/pokemon-ptitard.png);
@@ -91,15 +112,33 @@ main section h2 {
     background-repeat: no-repeat;
     margin-top: -1.5rem;
 }
-        /* paramètres des images */
-img {
-    width: 100%;
+/* paramètres des décos des h2 (les herbes hautes) */
+.bg-herbe-left {
+    display: none;
+    position: absolute;
+    height: 12rem;
+    width: 28em;
+    margin-top: -10em;
+    background-image: url(../assets/bg-herbe-left.png);
+    background-size: cover;
+    z-index: 3;
 }
-            /* settings des paragraphes globale*/
-p {
-    line-height: 1.8rem;
-    letter-spacing: 0.05rem;
-    margin: 2rem 3rem 4rem;
+.bg-herbe-right {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 12rem;
+    width: 28em;
+    margin-top: -10em;
+    background-image: url(../assets/bg-herbe-right.png);
+    background-size: cover;
+    z-index: 3;
+}
+/* montre les backgrounds herbe avec résolution =< 900 */
+@media screen and (min-width: 900px) {
+    .bg-herbe-left, .bg-herbe-right{
+        display: flex;
+    }
 }
         /* paramètres des titres h2 */
 .title-type-01 {
@@ -125,22 +164,26 @@ p {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);
     background-repeat: no-repeat;
     background-position-y: 25%;
-    background-size: cover;
+    background-size: 100% auto;
     box-shadow: inset 0 -50px 50px 0 #000;
     min-height: 15.3rem;
-    width: 100%;
     position: relative;
+}
+@media screen and (min-width: 900px) {
+    #section-background {
+        background-size: 100% auto;
+        background-position-y: 20%;
+        min-height: 28rem;
+    }
 }
 #section-background h1 {
     color: var(--fontColorLight);
     font-style: italic;
     font-size: 2rem;
-    margin: 0;
-    text-align: start;
     position: absolute;
-    bottom: 1rem;
-    left: 1.3rem;
-}   
+    bottom: 25%;
+    left: 5%;
+}
 /* Partie INTRO Satoshi */
 
 .satoshi-container {
@@ -175,15 +218,6 @@ p {
     width: 200px;
 }
 /* Partie OEUVRES */
-/* placement de la zone carousel */
-#zone-carousel {
-    height: 500px;
-    margin: 1.5rem 2.5rem;
-    background-color: aliceblue;
-}
-#article-oeuvres {
-    height: 900px;
-}
 /* Partie QUIZ */
 #zone-quiz{
     padding:2rem 0;
