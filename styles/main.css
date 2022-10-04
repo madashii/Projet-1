@@ -12,6 +12,11 @@ body{
 /*         Main Part         */
 main {
     width: 100%;
+    padding-top: 1rem;
+    /* padding-top relative à la taille de la navbar A FAIRE */
+}
+@media screen and (min-width: 600px) {
+    main {display: none;}
 }
 /* All section basics settings */
 main section {
@@ -170,6 +175,7 @@ p {
     width: 200px;
 }
 /* Partie OEUVRES */
+/* placement de la zone carousel */
 #zone-carousel {
     height: 500px;
     margin: 1.5rem 2.5rem;
