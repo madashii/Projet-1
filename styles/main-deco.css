@@ -1,8 +1,8 @@
    /* Positionnement des pokemons */
    .poke-image-left, .poke-image-right {
     position: absolute;
-    min-height: 9.4rem;
-    min-width: 9.4rem;
+    height: 40%;
+    width: 40%;
     z-index: 10;
 }
 .poke-image-left {
@@ -44,8 +44,6 @@
     background-image: url(../assets/pokemon-dracaufeu.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 12rem;
-    width: 12rem;
     margin-top: -2.8rem;
     margin-right: 1rem;
 }
