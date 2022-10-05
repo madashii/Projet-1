@@ -1,5 +1,17 @@
+
+header{
+    height: 10vh;
+    width: 100vh;
+    background-size: cover;
+    background: cover;
+    
+}
+
 .navbar {
+    z-index: 1000;
+    position: fixed;
     background-color: #8C0000;
+    padding: 20px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -7,7 +19,8 @@
     z-index: 10;
 }
 .navbar a {
-    color: rgb(255, 255, 255);
+    z-index: 850;
+    color: var(--lightColor);
     text-decoration: none;
 }
 ul {
@@ -40,7 +53,9 @@ ul {
 
 @media screen and (max-width: 900px){
     .navbar {
+        z-index: 900;
         position: fixed;
+        padding: 35px;
         color: var(--fontColorLight);
     }
 
@@ -53,7 +68,8 @@ ul {
     }
 
     .navbar .menu-poke {
-        display: block;
+        display: flex;
+        top: 33%;  
         width: auto;
         height: 2.5rem;
         margin: 0 0.5rem;
