@@ -1,0 +1,78 @@
+.modal-popup{
+    height: 0;
+    position: fixed;
+    bottom: 5%;
+    right: -110%;
+    width: 90%;
+    height:auto;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 9;
+    -webkit-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
+    background-color:#00c060;
+    max-width:400px;
+    transition: right ease-in-out 1s;
+}
+
+.modal-popup-header h2, .modal-popup-content p{
+    color:white;
+}
+
+.modal-popup h2{
+    margin:0;
+    padding:0;
+}
+
+.modal-popup-header{
+    background-color:#00a050;
+    padding:0.5rem 1rem;
+    display:flex;
+    justify-content: space-between;
+}
+
+.modal-popup-header-closebutton{
+    background-color:#00a050;
+    border:none;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.modal-popup-content{
+    background-color:#00c060;
+    padding:1rem;
+}
+
+.modal-popup p{
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    line-height: 1.5;
+}
+
+.progress-bar-wrapper {
+    height:5px;
+    position: relative;
+}
+.progress-bar{
+    width:0;
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    background-color:#05CF0B;
+    transition: width ease-in-out 8s;
+}
+
+
+.modal-popup-display {
+    right:1%;
+    
+}
+
+/* When modal is displayed, animate progress bar */
+.modal-popup-display .progress-bar{
+    width:100%;
+}

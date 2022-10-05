@@ -4,7 +4,7 @@
 }
 
 .quizz-question{
-    background:url("../assets/quizz/header1.png") no-repeat;
+    background:url("../assets/quizz/header1.webp") no-repeat;
     background-size: cover;
     aspect-ratio: 256/192;
     width:var(--width-quizz);
@@ -34,6 +34,7 @@
 
 .question p{
     padding:0 20px;
+    line-height: normal;
 }
 
 .progress-bar{
@@ -44,7 +45,7 @@
 }
 
 .quizz-health{
-    background:url("../assets/quizz/healthbar/6.png") no-repeat;
+    background:url("../assets/quizz/healthbar/6.webp") no-repeat;
     background-size:cover;
     aspect-ratio: 256/24;
     width:var(--width-quizz);
@@ -63,7 +64,7 @@
 }
 
 .quizz-start{
-    background:url("../assets/quizz/start.png") no-repeat;
+    background:url("../assets/quizz/start.webp") no-repeat;
     background-size:cover;
     aspect-ratio: 256/192;
     width:var(--width-quizz);
@@ -72,7 +73,7 @@
 }
 
 .quizz-clauses-card{
-    background:url("../assets/quizz/cards/grey_card.png");
+    background:url("../assets/quizz/cards/grey_card.webp");
     background-size:cover;
     aspect-ratio: 128/52;
     position: relative;
@@ -91,7 +92,7 @@
 }
 
 .quizz-footer{
-    background:url("../assets/quizz/footer.png") no-repeat;
+    background:url("../assets/quizz/footer.webp") no-repeat;
     background-size:cover;
     aspect-ratio: 256/50;
     width:var(--width-quizz);
