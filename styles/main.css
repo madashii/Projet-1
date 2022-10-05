@@ -14,8 +14,6 @@ main {
     width: 100%;
     height: auto;
     min-width: 320px;
-    padding-top: 2.8rem;
-    /* padding-top relative à la taille de la navbar A FAIRE */
 }
 /* All section basics settings */
 main section {
