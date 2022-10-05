@@ -135,7 +135,17 @@ p {
     margin: 0.5rem 0 0 1.5rem;
 }
 /* Partie JEUNESSE */
-
+/* premier paragraghe */
+@media screen and (min-width: 650px) {
+    #article-jeunesse article p:nth-child(1) {
+        margin-top: 4rem;
+    }
+}
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-child(1) {
+        width: 43vw;
+    }
+}
 /* Partie PARCOURS PROFESSIONNEL */
 .cite-porygon {
     font-size: 0.8rem;
