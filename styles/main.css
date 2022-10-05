@@ -45,8 +45,7 @@ img {
 }
 @media screen and (min-width: 900px) {
     main img { 
-        width: auto;
-        height: 15vw;
+        width: 25vw;
     }
 }
             /* settings des paragraphes globale*/
@@ -133,15 +132,45 @@ p {
     margin: 0.5rem 0 0 1.5rem;
 }
 /* Partie JEUNESSE */
-/* premier paragraghe */
-@media screen and (min-width: 650px) {
-    #article-jeunesse article p:nth-child(1) {
-        margin-top: 4rem;
+@media screen and (min-width: 900px) {
+    #article-jeunesse article {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5rem 0;
+        justify-content: center;
+        align-items: center;
     }
 }
+/* premier paragraghe */
 @media screen and (min-width: 900px) {
-    #article-jeunesse article p:nth-child(1) {
-        width: 43vw;
+    #article-jeunesse article p:nth-of-type(1) {
+        flex-basis: 49vw;
+        order: 1;
+    }
+}
+/* deuxième paragraghe */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-of-type(2) {
+        flex-basis: 49vw;
+        order: 4;
+    }
+}
+/* troisième paragraghe */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-of-type(3) {
+        flex-basis: 85vw;
+        order: 5;
+    }
+}
+/* les images article jeunesse */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article div:nth-of-type(1) {
+        flex-basis: 40vw;
+        order: 2;
+    }
+    #article-jeunesse article div:nth-of-type(2) {
+        flex-basis: 40vw;
+        order: 3;
     }
 }
 /* Partie PARCOURS PROFESSIONNEL */
