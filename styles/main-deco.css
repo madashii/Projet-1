@@ -1,0 +1,85 @@
+   /* Positionnement des pokemons */
+   .poke-image-left, .poke-image-right {
+    position: absolute;
+    max-height: 40%;
+    height: 200px;
+    width: 40%;
+    z-index: 10;
+}
+.poke-image-left {
+    left: 0;
+}
+.poke-image-right {
+    right: 0;
+}
+        /* Insertion des pokémons */
+#poke-pikachu {
+    background-image: url(../assets/pokemon-pikachu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.5rem;
+    margin-right: 0.5rem;
+    margin-left: auto;
+}
+#poke-ptitard {
+    background-image: url(../assets/pokemon-ptitard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.8rem;
+    margin-left: 2.5rem;
+}
+#poke-porygon {
+    background-image: url(../assets/pokemon-porygon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -5rem;
+}
+#poke-rondoudou {
+    background-image: url(../assets/pokemon-rondoudou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -3.8rem;
+    margin-left: 4.3rem;
+}
+#poke-dracaufeu {
+    background-image: url(../assets/pokemon-dracaufeu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.8rem;
+    margin-right: 1rem;
+}
+#poke-new {
+    background-image: url(../assets/pokemon-new.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -1.5rem;
+}
+
+/* paramètres des décos des h2 (les herbes hautes) */
+.bg-herbe-left {
+    display: none;
+    position: absolute;
+    height: 12rem;
+    width: 28em;
+    margin-top: -10em;
+    background-image: url(../assets/bg-herbe-left.png);
+    background-size: cover;
+    z-index: 3;
+}
+.bg-herbe-right {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 12rem;
+    width: 28em;
+    margin-top: -10em;
+    background-image: url(../assets/bg-herbe-right.png);
+    background-size: cover;
+    z-index: 3;
+}
+/* montre les backgrounds herbe avec résolution =< 900 */
+@media screen and (min-width: 900px) {
+    .bg-herbe-left, .bg-herbe-right{
+        display: flex;
+    }
+}

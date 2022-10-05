@@ -12,6 +12,8 @@ body{
 /*         Main Part         */
 main {
     width: 100%;
+    height: auto;
+    min-width: 320px;
 }
 /* All section basics settings */
 main section {
@@ -29,66 +31,23 @@ main section h2 {
     margin: 1.5rem 0 2rem 0;
     font-weight: 400;
     font-size: 1rem;
+    z-index: 5;
 }
-        /* Positionnement des pokebanners */
-.poke-image-left {
-    min-height: 9.4rem;
-    min-width: 9.4rem;
-    position: absolute;
-    left: 0;
-}
-.poke-image-right {
-    height: 9.4rem;
-    width: 9.4rem;
-    position: absolute;
-    right: 0;
-}
-        /* Insertion des pokémons */
-#poke-pikachu {
-    background-image: url(../assets/pokemon-pikachu.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -2.5rem;
-    margin-right: 0.5rem;
-}
-#poke-ptitard {
-    background-image: url(../assets/pokemon-ptitard.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -2.8rem;
-    margin-left: 2.5rem;
-}
-#poke-porygon {
-    background-image: url(../assets/pokemon-porygon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -5rem;
-}
-#poke-rondoudou {
-    background-image: url(../assets/pokemon-rondoudou.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -3.8rem;
-    margin-left: 4.3rem;
-}
-#poke-dracaufeu {
-    background-image: url(../assets/pokemon-dracaufeu.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 12rem;
-    width: 12rem;
-    margin-top: -2.8rem;
-    margin-right: 1rem;
-}
-#poke-new {
-    background-image: url(../assets/pokemon-new.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -1.5rem;
-}
-        /* paramètres des images */
+    /* paramètres des images */
 img {
     width: 100%;
+}
+@media screen and (min-width: 600px) {
+    main img { 
+        width: 80vw;
+        border-radius: 1rem;
+    }
+}
+@media screen and (min-width: 900px) {
+    main img { 
+        width: auto;
+        height: 15vw;
+    }
 }
             /* settings des paragraphes globale*/
 p {
@@ -120,34 +79,52 @@ p {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);
     background-repeat: no-repeat;
     background-position-y: 25%;
-    background-size: cover;
+    background-size: 100% auto;
     box-shadow: inset 0 -50px 50px 0 #000;
     min-height: 15.3rem;
-    width: 100%;
     position: relative;
+}
+@media screen and (min-width: 900px) {
+    #section-background {
+        background-size: 100% auto;
+        background-position-y: 20%;
+        min-height: 28rem;
+    }
 }
 #section-background h1 {
     color: var(--fontColorLight);
     font-style: italic;
     font-size: 2rem;
-    margin: 0;
-    text-align: start;
     position: absolute;
-    bottom: 1rem;
-    left: 1.3rem;
-}   
+    bottom: 25%;
+    left: 5%;
+}
 /* Partie INTRO Satoshi */
 
 .satoshi-container {
     display: flex;
     align-items: center;
 }
+@media screen and (min-width: 600px) {
+    .satoshi-container {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .satoshi-container {
+        width: 50%;
+    }
+}
 .satoshi-container p {
     font-size: 0.8rem;
     line-height: 1rem;
-    margin: 0;
-    padding: 2rem 2rem 0 1rem;
+    margin: 2rem 2rem 0 1rem;
     text-align: start;
+}
+@media screen and (min-width: 900px) {
+    #article-satoshi article p {
+        margin: 3em 8em 16em 31em;
+    }  
 }
 .portrait-satoshi {
     border-radius: 50%;
@@ -156,7 +133,17 @@ p {
     margin: 0.5rem 0 0 1.5rem;
 }
 /* Partie JEUNESSE */
-
+/* premier paragraghe */
+@media screen and (min-width: 650px) {
+    #article-jeunesse article p:nth-child(1) {
+        margin-top: 4rem;
+    }
+}
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-child(1) {
+        width: 43vw;
+    }
+}
 /* Partie PARCOURS PROFESSIONNEL */
 .cite-porygon {
     font-size: 0.8rem;
@@ -170,14 +157,6 @@ p {
     width: 200px;
 }
 /* Partie OEUVRES */
-#zone-carousel {
-    height: 500px;
-    margin: 1.5rem 2.5rem;
-    background-color: aliceblue;
-}
-#article-oeuvres {
-    height: 900px;
-}
 /* Partie QUIZ */
 #zone-quiz{
     padding:2rem 0;
