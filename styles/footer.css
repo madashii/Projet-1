@@ -1,0 +1,160 @@
+.footer a{
+    text-decoration:none;
+    color:black;
+}
+
+.footer{
+    padding:2rem;
+}
+
+.footer-main-content{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.footer h3{
+    margin:0 0 1rem 0;
+    padding:0;
+    font-size:1.5rem;
+}
+
+.footer p{
+    margin:0;
+    padding:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+    line-height: 1.8rem;
+}
+
+
+
+.footer-sources{
+    padding-bottom:2rem;
+    border-bottom:1px solid rgba(128,128,128,0.5);
+}
+
+.footer-students-list{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    font-size:1.25rem;
+    margin:0;
+}
+
+.footer-links{
+    display:flex;
+    gap:2rem;
+    justify-content:center;
+    align-items: center;
+    font-size:2rem;
+    padding:0;
+    margin:0;
+}
+
+.footer-social-content{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.footer-students{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-students-list, a{
+    padding-left:0;
+}
+
+
+.footer-students-info, .footer-links-site{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer-students-info{
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    margin: 0;
+    padding:0 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.footer-students-info:hover,
+.footer-students-info:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.footer-students-info a{
+    display:flex;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-students-list, a{
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+.footer-social{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-img{
+    background:url(../assets/footer/footer-img.png) no-repeat;
+    background-size: cover;
+    aspect-ratio: 1024/467;
+}
+
+@media screen and (min-width: 900px){
+    .footer-main-content{
+        flex-direction:row;
+        gap:6rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    .footer-sources{
+        width:30%;
+        border:0;
+    }
+    .footer-links{
+        flex-direction:column;
+        padding:0;
+        margin:0;
+    }
+    .footer-students-list{
+        margin:0;
+        padding:0;
+    }
+    .footer-social-content{
+        flex-direction:row;
+    }
+    .footer-social{
+        display:flex;
+        flex-direction:column;
+    }
+
+}
