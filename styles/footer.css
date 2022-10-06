@@ -4,13 +4,16 @@
 }
 
 .footer{
+    display:flex;
+    flex-direction:column;
     padding:2rem;
+    gap:2rem;
 }
 
 .footer-main-content{
     display:flex;
     flex-direction: column;
-    gap:2rem;
+    gap:1rem;
 }
 
 .footer h3{
@@ -30,7 +33,7 @@
 
 
 .footer-sources{
-    padding-bottom:2rem;
+    padding-bottom:1.5rem;
     border-bottom:1px solid rgba(128,128,128,0.5);
 }
 
@@ -133,7 +136,7 @@
     background:url(../assets/footer/footer-img.png) no-repeat;
     background-size: cover;
     aspect-ratio: 1024/467;
-    width:50%;
+    width:80%;
 
 }
 
