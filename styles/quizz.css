@@ -169,6 +169,8 @@
     color:white;
 }
 
+
+
 @media screen and (max-width:900px){
     .container-quizz{
         justify-content: center;
@@ -197,5 +199,17 @@
         width:40%;
     }
 }
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    .quizz-rules{
+        width:60%;
+    }
+    .quizz-question, .quizz-health, .progress-bar, .quizz-clauses, .quizz-start ,.quizz-footer{
+        width:60%;
+    }
+}
+
+
+
 
 
