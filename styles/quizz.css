@@ -114,6 +114,25 @@
     aspect-ratio: 256/48;
 }
 
+.quizz-footer-mute{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color:black;
+    width:30%;
+    height:90%;
+    bottom:0;
+    right:0;
+    aspect-ratio: 256/48;
+}
+
+.quizz-footer-mute i{
+    color:white;
+    font-size:clamp(15px, 3vw, 40px);
+}
+
 .quizz-footer-timer p{
     color:white;
 }
