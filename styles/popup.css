@@ -7,13 +7,20 @@
     height:auto;
     overflow: hidden;
     border-radius: 10px;
-    z-index: 9;
+    z-index: 999;
     -webkit-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
     box-shadow: -2px 5px 28px -1px rgba(0, 0, 0, 0.25);
     background-color:#00c060;
     max-width:400px;
     transition: right ease-in-out 1s;
+}
+
+@media screen and (max-width: 400px){
+    .modal-popup{
+        top: 5%;
+        bottom:initial;
+    }
 }
 
 .modal-popup-header h2, .modal-popup-content p{
