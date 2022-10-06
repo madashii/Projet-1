@@ -1,100 +1,51 @@
-header{
-    height: 10vh;
-    background-size: cover;
-    background: cover;
-}
-
-.navbar {
-    background-color: #8C0000;
-    z-index: 1000;
+header {
     position: fixed;
-    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    justify-content: center;
+    background-color: var(--darkColor);
 }
-.navbar a {
-    z-index: 850;
-    color: white;
+header img {
+    flex-basis: 0;
+    width: 5em;
+    margin: 1em;
+}
+/* l'animation pour le toggle navbar js - sur l'image */
+.rotation-image-nav {
+    transform: rotate(720deg);
+    transition: 1s;
+}
+header h1 {
+    text-align: center;
+    margin: 0;
+    flex-basis: 50%;
+    font-size: 1.8rem;
+}
+header h1 a {
     text-decoration: none;
 }
-
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
+.navbar {
+    background-color: aqua;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
 }
-
-.navbar .nav-links ul {
-    display: flex;
-    list-style: none;
-}
-
-.navbar .nav-links ul li {
-    margin: 0 25px;
-}
-
-.navbar .nav-links ul li.active a {
-    font-weight: 600;
-}
-
-.navbar .menu-poke {
+.navbar-display-none {
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    width: 30px;
 }
-
-@media screen and (max-width: 900px){
-    .navbar {
-        z-index: 900;
-        position: fixed;
-        padding: 35px;
-    }
-
-    .navbar .logo {
-        color: white;
-        margin-left: 25%;
-        position: absolute;
-        top: 30%;
-        left: 50px;
-    }
-
-    .navbar .menu-poke {
-        display: flex;
-        top: 33%;
-    }
-
-     .nav-links {
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: rgb(0 0 0 / 63%);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 100%;
-        transition: all 0.5s ease;
-     }
-
-     .nav-links.mobile-menu {
-        margin-left: 0;
-    }
-
-     .nav-links ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-     }
-
-     .navbar .nav-links ul li {
-        margin: 0;
-        font-size: 1.2rem;
-     }
+.container-navbar-ul {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: nowrap column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
-
+ul li {
+    list-style-type: none;
+}
