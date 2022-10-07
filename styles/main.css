@@ -1,17 +1,22 @@
-/*             Reset settings             */
+
 *{
     box-sizing: border-box;
 }
-body{
+body, html{
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: sans-serif;
     z-index: 0;
+    background-color: var(--darkColor);
+    scroll-behavior: smooth;
 }
 /*         Main Part         */
 main {
+    overflow-y: hidden;
     width: 100%;
+    height: auto;
+    min-width: 320px;
+    margin-top: 3.13rem;
 }
 /* All section basics settings */
 main section {
@@ -19,123 +24,253 @@ main section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 main section:nth-of-type(2n+1){
     background-color: var(--darkColor);
 }
+/* main section:nth-of-type(2n+2){
+    background-image: url(../assets/bg-partern.png);
+    background-attachment: fixed;
+
+} */
 main section h2 {
     background-color: var(--greyColor);
     padding: 1.5rem 0 1.5rem 1rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 2rem 0;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.9rem;
+    z-index: 5;
 }
-        /* Positionnement des pokebanners */
-.poke-image-left {
-    height: 9.4rem;
-    width: 9.4rem;
-    position: absolute;
-    left: 15%;
-}
-.poke-image-right {
-    height: 9.4rem;
-    width: 9.4rem;
-    position: absolute;
-    right: 15%;
-}
-        /* Insertion des pokémons */
-#poke-pikachu {
-    background-image: url(../assets/pokemon-pikachu.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-}
-#poke-ptitard {
-    background-image: url(../assets/pokemon-ptitard.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#poke-porygon {
-    background-image: url(../assets/pokemon-porygon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#poke-rondoudou {
-    background-image: url(../assets/pokemon-rondoudou.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#poke-dracaufeu {
-    background-image: url(../assets/pokemon-dracaufeu.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#poke-new {
-    background-image: url(../assets/pokemon-new.png);
-    background-size: contain;
-}
+    /* paramètres des images */
 img {
     width: 100%;
 }
+@media screen and (min-width: 600px) {
+    main img { 
+        width: 80vw;
+        border-radius: 1rem;
+    }
+}
+@media screen and (min-width: 900px) {
+    main img { 
+        width: 25vw;
+    }
+}
             /* settings des paragraphes globale*/
 p {
-    margin: 0;
-    padding: 0.5rem 1rem 2.5rem 1rem;
     line-height: 1.8rem;
     letter-spacing: 0.05rem;
+    margin: 2rem 3rem 4rem;
+    font-size: 1.2rem;
 }
+@media screen and (min-width: 900px) {
+    p {
+        line-height: 2rem;
+        font-size: 1.4rem;
+    }
+}
+        /* paramètres des titres h2 */
 .title-type-01 {
     border-radius: 0 0.5rem 0.5rem 0;
     color: var(--fontColorLight);
     margin-right: 20%;
     text-align: start;
 }
+    /* modif des h2 aligné à droite  */
 .title-type-02 {
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: var(--lightColor);
     margin-left: 20%;
     margin-top: 2rem;
     text-align: end;
+    padding-right: 1.5rem;
 }
+.title-type-02 ~ article {
+    color: var(--lightColor);
+}
+
+
 /* Partie ACCUEIL */
 #section-background {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);
     background-repeat: no-repeat;
     background-position-y: 25%;
-    background-size: cover;
-    box-shadow: inset 0 -50px 50px 0 #000;
-    min-height: 15.3rem;
-    width: 100%;
+    background-size: 100% auto;
+    min-height: 50vw;
     position: relative;
-    margin-top: 72px;
+}
+@media screen and (min-width: 900px) {
+    #section-background {
+        background-size: cover;
+        min-height: 25vw;
+    }
 }
 #section-background h1 {
     color: var(--fontColorLight);
-    margin: 0;
+    font-style: italic;
+    font-size: 2rem;
     position: absolute;
-    bottom: 1rem;
-    left: 1.3rem;
-}   
+    bottom: 25%;
+    left: 5%;
+}
 /* Partie INTRO Satoshi */
 
 .satoshi-container {
     display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 600px) {
+    .satoshi-container {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .satoshi-container {
+        width: 50%;
+    }
+}
+.satoshi-container p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 2rem 2rem 0 1rem;
+    text-align: start;
+}
+@media screen and (min-width: 900px) {
+    #article-satoshi article {
+        margin-left: 40vw;
+        margin-bottom: 10vw;
+
+    }  
 }
 .portrait-satoshi {
     border-radius: 50%;
-    padding: 0 2rem;
     height: 8rem;
     width: auto;
+    margin: 0.5rem 0 0 1.5rem;
+}
+/* Partie JEUNESSE */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* premier paragraghe */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-of-type(1) {
+        flex-basis: 49%;
+        order: 1;
+    }
+}
+/* deuxième paragraghe */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-of-type(2) {
+        flex-basis: 49%;
+        order: 4;
+    }
+}
+/* troisième paragraghe */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article p:nth-of-type(3) {
+        flex-basis: 85%;
+        margin: 10%;
+        order: 5;
+    }
+}
+/* les images article jeunesse */
+@media screen and (min-width: 900px) {
+    #article-jeunesse article div {
+        flex-basis: 40%;
+    }
+    #article-jeunesse article div:nth-of-type(1) {
+        order: 2;
+    }
+    #article-jeunesse article div:nth-of-type(2) {
+        order: 3;
+    }
+}
+/* Partie PARCOURS PROFESSIONNEL */
+.cite-porygon {
+    font-size: 0.8rem;
+    text-align: start;
+    margin-left: 2%;
+    max-width: 70%;
+}
+#portrait-shigeru {
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+}
+@media screen and (min-width: 900px) {
+    /*placement dans l'ordre de la sheetstyle*/
+    .article-pro {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    .article-pro p {
+        padding: 5vw;
+    }
+    .article-pro p:nth-of-type(1) {
+        flex-basis: 60%;
+        order: 1;
+    }
+    .article-pro div:nth-of-type(1) {
+        flex-basis: 45%;
+        order: 2;
+    }
+    .article-pro p:nth-of-type(2) {
+        flex-basis: 40%;
+        order: 3;
+    }
+    .article-pro p:nth-of-type(3) {
+        flex-basis: 60%;
+        order: 4;
+    }
+    .article-pro div:nth-of-type(2) {
+        flex-basis: 45%;
+        order: 5;
+    }
+    .article-pro div:nth-of-type(3) {
+        flex-basis: 45%;
+        order: 6;
+    }
+    .article-pro p:nth-of-type(4) {
+        flex-basis: 100%;
+        order: 7;
+        align-self: flex-end;
+        margin-left: 40%;
+    }
+    .article-pro p:nth-of-type(5) {
+        flex-basis: 100%;
+        order: 8;
+        align-self: flex-end;
+        margin-right: 40%;
+        margin-bottom: 10%;
+    }
+    /*les images de larticle parcours pro*/
+    .article-pro img:nth-of-type(1) {
+        width: 35vw;
+    }
+    #portrait-shigeru {
+        height: 50%;
+        width: 50%;
+    }
 }
 
-/* Partie JEUNESSE */
-/* Partie PARCOURS PROFESSIONNEL */
 /* Partie OEUVRES */
+
 /* Partie QUIZ */
-#zone-quiz{
-    padding:2rem 0;
+.rule-quiz {
+    width: 50%;
+    align-self: center;
 }
 /* Partie CONTACT */
-
+#form-contact {
+    height: 900px;
+    color: #fff;
+}
 /*         End Main Part         */
