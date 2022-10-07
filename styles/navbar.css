@@ -8,7 +8,7 @@ header{
 .navbar {
     z-index: 1000;
     position: fixed;
-    background-color: #8C0000;
+    background-color:var(--darkColor);
     padding: 20px;
     display: flex;
     justify-content: space-between;
