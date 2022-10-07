@@ -2,19 +2,22 @@
 *{
     box-sizing: border-box;
 }
-body{
+body, html{
     margin: 0;
     padding: 0;
     font-size: 16px;
     font-family: sans-serif;
     z-index: 0;
     background-color: var(--darkColor);
+    scroll-behavior: smooth;
 }
 /*         Main Part         */
 main {
+    overflow-y: hidden;
     width: 100%;
     height: auto;
     min-width: 320px;
+    margin-top: 3.13rem;
 }
 /* All section basics settings */
 main section {
@@ -26,6 +29,11 @@ main section {
 main section:nth-of-type(2n+1){
     background-color: var(--darkColor);
 }
+/* main section:nth-of-type(2n+2){
+    background-image: url(../assets/bg-partern.png);
+    background-attachment: fixed;
+
+} */
 main section h2 {
     background-color: var(--greyColor);
     padding: 1.5rem 0 1.5rem 1rem;
@@ -87,15 +95,13 @@ p {
     background-repeat: no-repeat;
     background-position-y: 25%;
     background-size: 100% auto;
-    box-shadow: inset 0 -50px 50px 0 #000;
-    min-height: 15.3rem;
+    min-height: 50vw;
     position: relative;
 }
 @media screen and (min-width: 900px) {
     #section-background {
-        background-size: 100% auto;
-        background-position-y: 20%;
-        min-height: 28rem;
+        background-size: cover;
+        min-height: 25vw;
     }
 }
 #section-background h1 {
@@ -194,9 +200,66 @@ p {
 }
 #portrait-shigeru {
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    width: 50vw;
+    height: 50vw;
 }
+@media screen and (min-width: 900px) {
+    /*placement dans l'ordre de la sheetstyle*/
+    .article-pro {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    .article-pro p {
+        padding: 5vw;
+    }
+    .article-pro p:nth-of-type(1) {
+        flex-basis: 60%;
+        order: 1;
+    }
+    .article-pro div:nth-of-type(1) {
+        flex-basis: 45%;
+        order: 2;
+    }
+    .article-pro p:nth-of-type(2) {
+        flex-basis: 40%;
+        order: 3;
+    }
+    .article-pro p:nth-of-type(3) {
+        flex-basis: 60%;
+        order: 4;
+    }
+    .article-pro div:nth-of-type(2) {
+        flex-basis: 45%;
+        order: 5;
+    }
+    .article-pro div:nth-of-type(3) {
+        flex-basis: 45%;
+        order: 6;
+    }
+    .article-pro p:nth-of-type(4) {
+        flex-basis: 100%;
+        order: 7;
+        align-self: flex-end;
+        margin-left: 40%;
+    }
+    .article-pro p:nth-of-type(5) {
+        flex-basis: 100%;
+        order: 8;
+        align-self: flex-end;
+        margin-right: 40%;
+        margin-bottom: 10%;
+    }
+    /*les images de larticle parcours pro*/
+    .article-pro img:nth-of-type(1) {
+        width: 35vw;
+    }
+    #portrait-shigeru {
+        height: 50%;
+        width: 50%;
+    }
+}
+
 /* Partie OEUVRES */
 /* Partie QUIZ */
 #zone-quiz{
@@ -208,6 +271,3 @@ p {
     color: #fff;
 }
 /*         End Main Part         */
-header {
-    display: none;
-}

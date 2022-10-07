@@ -1,12 +1,15 @@
-// const menuPokeball = document.querySelector(".menu-poke")
-//     const navLinks = document.querySelector(".nav-links")
+const animationNavLogo = document.querySelector("#image-nav");
+const displayList = document.querySelector("#nav-list");
 
-//     menuPokeball.addEventListener('click',()=>{
-//     navLinks.classList.toggle('mobile-menu')
-//     })
-const animationLogoNav = document.querySelector(".logo-menu-navbar");
-// const displayList = document.querySelectorby(".container-navbar-ul");
+// animation navbar list
+animationNavLogo.addEventListener("click", () => {
+  animationNavLogo.classList.toggle("nav-image-rotation");
+  displayList.classList.toggle("nav-list-display");
+  console.log("ok");
+});
+// animation navigation article scroll smooth
+const ancreNav = document.querySelectorAll("ancre-action-nav");
 
-animationLogoNav.addEventListener("click", () => {
-  animationLogoNav.classList.toggle("rotation-image-nav");
+ancreNav.addEventListener("click", () => {
+  ancreNav.forEach((element) => console.log("ok"));
 });

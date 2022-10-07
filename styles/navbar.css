@@ -1,0 +1,119 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+    height: 3.13rem;
+    width: 100%;
+    background: linear-gradient(var(--darkTwoColor) 50%, var(--darkColor) 50%);
+    box-shadow: 0 0 20px 5px black;
+}
+@media screen and (min-width: 900px) {
+    header {
+        height: 3.75rem;
+    }
+}
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.toggle {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width) {
+    .toggle {
+        flex-basis: 10%;
+        order: 5;
+    }
+}
+/* le titre et le logo pokeball */
+.nav-title-image {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    max-width: 70%;
+}
+.nav-title-image h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+@media screen and (min-width: 900px) {
+    .nav-title-image h1 {
+        flex-basis: 25vw;
+    }
+}
+.nav-title-image h1 a {
+    color: var(--fontColorLight);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+@media screen and (min-width: 900px) {
+    .nav-title-image {
+        width: 25%;
+        order: 0;
+    }
+    .nav-title-image h1 a {
+        font-size: 1.5rem;
+    }
+}
+/* image logo  */
+.nav-image {
+    width: 3rem;
+    padding: 0.2em;
+    transition: 1s;
+}
+@media screen and (min-width: 900px) {
+    .nav-image {
+        margin-left: 0.5rem;
+    }
+}
+/* class animation image nav */
+.nav-image-rotation {
+    transform: rotate(720deg);
+}
+/* navigation ul li a */
+.nav-list-hide {
+    margin: 0;
+    margin-top: 0;
+    padding: 1rem;
+    list-style-type: none;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.872) 85%, rgba(0, 0, 0, 0.112));
+    width: 100%;
+    flex-flow: column nowrap;
+    border-radius: 0 0 8% 8%;
+    justify-content: space-around;
+    min-height: 16rem;
+    display: none;
+}
+@media screen and (min-width: 900px) {
+    .nav-list-hide {
+        display: flex;
+        flex-flow: row wrap;
+        width: 50%;
+        background: none;
+        font-size: 1em;
+        min-height: 0;
+        order: 0;
+    }
+}
+.nav-list-hide li a {
+    text-decoration: none;
+    color: var(--fontColorLight);
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 900px) {
+    .nav-list-hide li a {
+        font-size:medium;
+    }
+}
+.nav-list-display {
+    display: flex;
+}
