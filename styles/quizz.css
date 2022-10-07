@@ -177,6 +177,9 @@
 
 
 @media screen and (max-width:900px){
+    .quizz-rules-container-text img{
+        max-width:100%;
+    }
     .container-quizz{
         justify-content: center;
         align-items:center;
@@ -203,6 +206,9 @@
     .quizz{
         width:40%;
     }
+    .quizz-rules-container-text img{
+        max-width:100%;
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 900px) {
@@ -211,6 +217,9 @@
     }
     .quizz-question, .quizz-health, .progress-bar, .quizz-clauses, .quizz-start ,.quizz-footer{
         width:60%;
+    }
+    .quizz-rules-container-text img{
+        max-width:100%;
     }
 }
 
