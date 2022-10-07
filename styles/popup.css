@@ -49,13 +49,13 @@
 
 .modal-popup-content{
     background-color:#00c060;
-    padding:1rem;
+    padding:1.5rem;
 }
 
 .modal-popup p{
     margin: 0;
     padding: 0;
-    font-size: 0.75em;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -75,7 +75,6 @@
 
 
 .modal-popup-display {
-    right:1%;
     
 }
 
