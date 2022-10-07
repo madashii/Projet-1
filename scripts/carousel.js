@@ -168,7 +168,7 @@ appliquer comme action ("ici le nombre d'éléments à scroll et le nombre d'él
 
 new Carousel(document.querySelector('#carousel1'), { 
     slidesToScroll: 1,
-    slidesVisible: 1,
+    slidesVisible: 2,
     loop: true
     })
 

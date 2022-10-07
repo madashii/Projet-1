@@ -1,104 +1,132 @@
-header{
-    height: 10vh;
-    background-size: cover;
-    background: cover;
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+    height: 3.13rem;
+    width: 100%;
+    background: linear-gradient(var(--darkTwoColor) 50%, var(--darkColor) 50%);
+    box-shadow: 0 0 20px 5px black;
 }
 
 .navbar {
-    z-index: 1000;
-    position: fixed;
-    background-color: #8C0000;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
 }
-
-.navbar a {
-    z-index: 850;
-    color: white;
-    text-decoration: none;
+.toggle {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
-
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
+@media screen and (min-width) {
+    .toggle {
+        flex-basis: 10%;
+        order: 5;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
 }
-
-.navbar .nav-links ul {
+/* le titre et le logo pokeball */
+.nav-title-image {
+    flex: auto;
     display: flex;
-    list-style: none;
+    align-items: center;
+    flex-flow: row nowrap;
+    max-width: 70%;
 }
-
-.navbar .nav-links ul li {
-    margin: 0 25px;
+.nav-title-image h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
 }
-
-.navbar .nav-links ul li.active a {
-    color: red;
-    font-weight: 600;
+@media screen and (min-width: 900px) {
+    .nav-title-image h1 {
+        flex-basis: 25vw;
+    }
 }
-
-
-.navbar .menu-poke {
+.nav-title-image h1 a {
+    color: var(--fontColorLight);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+@media screen and (min-width: 900px) {
+    .nav-title-image {
+        width: 25%;
+        order: 0;
+    }
+    .nav-title-image h1 a {
+        font-size: 1.5rem;
+    }
+}
+/* image logo  */
+.nav-image {
+    width: 3rem;
+    padding: 0.2em;
+    transition: 1s;
+}
+@media screen and (min-width: 900px) {
+    .nav-image {
+        margin-left: 0.5rem;
+    }
+}
+/* class animation image nav */
+.nav-image-rotation {
+    transform: rotate(720deg);
+    
+}
+/* navigation ul li a */
+.nav-list-hide {
+    margin: 0;
+    margin-top: 0;
+    padding: 1rem;
+    list-style-type: none;
+    text-align: center;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.872) 85%, rgba(0, 0, 0, 0.112));
+    width: 100%;
+    flex-flow: column nowrap;
+    border-radius: 0 0 8% 8%;
+    justify-content: space-around;
+    min-height: 16rem;
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    width: 30px;
 }
-
-@media screen and (max-width: 900px){
-    .navbar {
-        z-index: 900;
-        position: fixed;
-        padding: 35px;
-    }
-
-    .navbar .logo {
-        color: white;
-        margin-left: 25%;
-        position: absolute;
-        top: 30%;
-        left: 50px;
-    }
-
-    .navbar .menu-poke {
+@media screen and (min-width: 900px) {
+    .nav-list-hide {
         display: flex;
-        top: 33%;
+        flex-flow: row wrap;
+        width: 64%;
+        background: none;
+        font-size: 1em;
+        min-height: 0;
+        order: 0;
+        height: auto;
+        justify-content: space-around;
+        padding: 0;
     }
-
-     .nav-links {
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: rgb(0 0 0 / 63%);
-        /* backdrop-filter: blur(8px); */
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 100%;
-        transition: all 0.5s ease;
-     }
-
-     .nav-links.mobile-menu {
-        margin-left: 0;
-    }
-
-     .nav-links ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-     }
-
-     .navbar .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2rem;
-     }
 }
-
+.nav-list-hide li a {
+    text-decoration: none;
+    color: var(--fontColorLight);
+    font-size: 1.5rem;
+}
+.nav-list-hide li a:hover {
+    text-decoration: underline;
+}
+@media screen and (min-width: 900px) {
+    .nav-list-hide li a {
+        font-size:medium;
+    }
+    .nav-list-hide li:last-child {
+        margin-right: 10%;
+    }
+}
+.nav-list-display {
+    display: flex;
+}

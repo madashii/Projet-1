@@ -12,25 +12,38 @@
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/2313d80afd.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="preloader"> 
+      <video autoplay loop muted > 
+              <source src="/assets/video2.mp4" >
+       </video>
+         <p class= "buttonPrelo" style="---darkColor:var(---darkColor)"> Start Game</p>
+</div>
     <header>
       <nav class="navbar">
-        <a href="#" class="logo">SATOSHI TAJIRI</a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="#">Jeunesse</a></li>
-            <li><a href="#">Parcours Professionnel</a></li>
-            <li><a href="#">Oeuvres</a></li>
-            <li><a href="#">Quizz</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <img
+        <div class="nav-title-image">
+          <img
           src="./assets/logo-pokeball.png"
           alt="menu pokeball"
-          class="menu-poke"
-        />
+          id="image-nav"
+          class="nav-image"
+          />
+          <h1>
+            <a href="#">SATOSHI TAJIRI</a>
+          </h1>
+        </div>
+        <ul class="nav-list-hide" id="nav-list">
+          <li><a class="ancre-action-nav" href="#poke-ptitard">Jeunesse</a></li>
+          <li><a class="ancre-action-nav" href="#poke-porygon">Parcours Professionnel</a></li>
+          <li><a class="ancre-action-nav" href="#poke-rondoudou">Oeuvres</a></li>
+          <li><a class="ancre-action-nav" href="#poke-dracaufeu">Quizz</a></li>
+          <li><a class="ancre-action-nav" href="#poke-new">Contact</a></li>
+        </ul>
+        <div class="toggle">
+          <input type="checkbox" id="dark-mode">
+        </div>
       </nav>
     </header>
     <main>
@@ -50,12 +63,12 @@
             alt="portrait de Satoshi Tajiri"
           />
           <p>
-            Surnommé “Docteur insecte” il est le mystérieux créateur de Pokémon.
+            <span class="text-italic"> Surnommé “Docteur insecte” il est le mystérieux créateur de Pokémon.</span>
           </p>
         </div>
         <article>
           <p>
-            Satoshi Tajiri, né le 28 août 1965, est un créateur et producteur de
+            <span class="text-bold">Satoshi Tajiri</span>, né le 28 août 1965, est un créateur et producteur de
             jeu vidéo japonais. Il est notamment connu pour être le créateur de
             la franchise Pokémon et le fondateur et président du développeur de
             jeux vidéo Game Freak.
@@ -73,24 +86,26 @@
             Il est né à Tokyo d'un père vendeur automobile pour Nissan (Yamasaru
             Satori) et d'une mère au foyer (Nol Niyan). Enfant, Tajiri faisait
             une collection d'insectes, ce qui deviendra une source d'inspiration
-            pour son travail dans le jeu vidéo plus tard. Il était tellement
-            intéressé par la collecte et l'étude des insectes qu'il hérita du
-            surnom "Dr Bug" (Docteur Insecte) par ses pairs.
+            pour son travail dans le jeu vidéo plus tard.
           </p>
-          <img
-            src="./assets/image-archive.jpg"
-            alt="croquis de l'univers Pokémon"
-          />
+          <div>
+            <img
+              src="./assets/image-archive.jpg"
+              alt="croquis de l'univers Pokémon"
+            />
+          </div>
           <p>
             Satoshi devient passionné par les jeux d'arcade adolescent ce qui le
             conduit à vouloir créer lui-même des jeux vidéo. Après avoir démonté
             sa Famicom, pour voir comment elle fonctionnait, il gagne un
             concours de création de jeu vidéo organisé par Sega.
           </p>
-          <img
-            src="/assets/bg-salle-arcade.jpg"
-            alt="image d'une salle de jeux d'arcade au Japon"
-          />
+          <div>
+            <img
+              src="/assets/bg-salle-arcade.jpg"
+              alt="image d'une salle de jeux d'arcade au Japon"
+            />
+          </div>
           <p>
             À cause de sa fascination pour les jeux vidéo, Satoshi Tajiri
             faillit ne pas obtenir son diplôme de fin d'études. Son père tente
@@ -108,7 +123,7 @@
         <cite class="cite-porygon">
           “Je provoque des crises d’épilepsie” - Porygon -
         </cite>
-        <article>
+        <article class="article-pro">
           <p>
             Dans les années 1980, Satoshi Tajiri crée le magazine de jeux Game
             Freak. Le rejoindra en premier Ken Sugimori, qui a dessiné toutes
@@ -149,12 +164,11 @@
             des noms par défaut sélectionnables par le joueur pour son
             personnage ou pour le rival dans Pokémon Vert et Rouge.
           </p>
-          <div>
-            <img
-              id="portrait-shigeru"
-              src="./assets/portrait-shigeru-miyamoto.jpg"
-              alt="image de Shigeru Miyamoto."
-            />
+          <div><a rel="noopener" href="https://fr.wikipedia.org/wiki/Shigeru_Miyamoto" target="_blank"><img
+            id="portrait-shigeru"
+            src="./assets/portrait-shigeru-miyamoto.jpg"
+            alt="image de Shigeru Miyamoto."
+          /></a>
             <p>Shigeru Miyamoto</p>
           </div>
           <p>
@@ -175,47 +189,47 @@
           <div id="carousel1">
             <div class="item">
               <div class="item-image">
-                <img src="/assets/img/img1.jpg" alt="" />
+                <img src="/assets/img/game-pokemon-red-and-blue.jpg" alt="" />
               </div>
               <div class="item-body">
-                <div class="item-title">Mon titre 1</div>
-                <div class="item-description">Ici une petite description</div>
+                <div class="item-title">Version Rouge/Bleu</div>
+                <div class="item-description">Date de sortie : 27 février 1996</div>
               </div>
             </div>
             <div class="item">
               <div class="item-image">
-                <img src="/assets/img/img2.jpg" alt="" />
+                <img src="/assets/game-pokemon-yellow.jpg" alt="" />
               </div>
               <div class="item-body">
-                <div class="item-title">Mon titre 1</div>
-                <div class="item-description">Ici une petite description</div>
+                <div class="item-title">Version Jaune</div>
+                <div class="item-description">Date de sortie : 12 septembre 1998</div>
               </div>
             </div>
             <div class="item">
               <div class="item-image">
-                <img src="/assets/img/img3.jpg" alt="" />
+                <img src="/assets/game-pokemon-or.jpg" alt="" />
               </div>
               <div class="item-body">
-                <div class="item-title">Mon titre 1</div>
-                <div class="item-description">Ici une petite description</div>
+                <div class="item-title">Version Or</div>
+                <div class="item-description">Date de sortie : 21 novembre 1999</div>
               </div>
             </div>
             <div class="item">
               <div class="item-image">
-                <img src="/assets/img/img4.jpg" alt="" />
+                <img src="/assets/game-pokemon-crystal.jpg" alt="" />
               </div>
               <div class="item-body">
-                <div class="item-title">Mon titre 1</div>
-                <div class="item-description">Ici une petite description</div>
+                <div class="item-title">Version Cristal</div>
+                <div class="item-description">Date de sortie : 14 décembre 2000</div>
               </div>
             </div>
             <div class="item">
               <div class="item-image">
-                <img src="/assets/img/img5.jpg" alt="" />
+                <img src="/assets/1200px-Pokémon_Émeraude_Recto.png" alt="" />
               </div>
               <div class="item-body">
-                <div class="item-title">Mon titre 1</div>
-                <div class="item-description">Ici une petite description</div>
+                <div class="item-title">Version Emeraude</div>
+                <div class="item-description">Date de sortie : 16 septembre 2004</div>
               </div>
             </div>
           </div>
@@ -227,66 +241,130 @@
       <section id="zone-quiz">
         <div class="bg-herbe-left"></div>
         <h2 class="title-type-01">QUIZ</h2>
-        <p>
-          Grâce à cette biographie et à l'aide de tes connaissances sur la
-          culture Pokémon, réponds au quiz qui est proposé ci-dessous .
-        </p>
-        <p>"ATTENTION UN POKEMON SAUVAGE APPARAIT!"</p>
-        <div class="quizz">
-          <div class="quizz-question">
-            <div class="question">
-              <p id="question-text">Question</p>
+        <div class="container-quizz">
+          <div class="quizz-rules">
+            <div class="quizz-rules-container">
+              <h3>Règles</h3>
+              <div class="quizz-rules-container-text">
+                <p>Bienvenue sur le quizz de notre site. Il comporte des questions sur l'univers général de Pokémon.</p>
+                <p>Il y a 10 questions et tu disposes de 10 vies. En bas à gauche tu retrouveras la question en cours et en bas à droite tu pourras muter la musique pendant le quizz.</p>
+                <p>Bonne chance !</p>
+                <img src="/assets/img/tumblr_mv5g1pUzYi1skat7bo1_1280.gif" alt="">
+              </div>
             </div>
           </div>
-          <div class="quizz-start"></div>
-          <!--Div à cacher si on commence le quizz-->
-          <div class="quizz-health"></div>
-          <!--Div à cacher si le quizz n'a pas commencer-->
-          <div class="quizz-clauses">
+          <div class="quizz">
+            <div class="quizz-question">
+              <div class="question">
+                <p id="question-text">Question</p>
+              </div>
+            </div>
+            <div class="quizz-start"></div>
+            <!--Div à cacher si on commence le quizz-->
+            <div class="quizz-health"></div>
             <!--Div à cacher si le quizz n'a pas commencer-->
-            <div id="choice1" class="quizz-clauses-card">
-              <div class="quizz-clauses-card-text">
-                <p id="choice1-text">Choix 1</p>
+            <div class="quizz-clauses">
+              <!--Div à cacher si le quizz n'a pas commencer-->
+              <div id="choice1" class="quizz-clauses-card">
+                <div class="quizz-clauses-card-text">
+                  <p id="choice1-text">Choix 1</p>
+                </div>
+              </div>
+              <div id="choice2" class="quizz-clauses-card">
+                <div class="quizz-clauses-card-text">
+                  <p id="choice2-text">Choix 2</p>
+                </div>
+              </div>
+              <div id="choice3" class="quizz-clauses-card">
+                <div class="quizz-clauses-card-text">
+                  <p id="choice3-text">Choix 3</p>
+                </div>
+              </div>
+              <div id="choice4" class="quizz-clauses-card">
+                <div class="quizz-clauses-card-text">
+                  <p id="choice4-text">Choix 4</p>
+                </div>
               </div>
             </div>
-            <div id="choice2" class="quizz-clauses-card">
-              <div class="quizz-clauses-card-text">
-                <p id="choice2-text">Choix 2</p>
+            <div class="quizz-footer">
+              <div class="quizz-footer-timer">
+                <p id="number-question">0</p>
+              </div>
+              <div class="quizz-footer-mute">
+                <i id="quizz-footer-mute-icon" class="fa-sharp fa-solid fa-volume-high"></i>
               </div>
             </div>
-            <div id="choice3" class="quizz-clauses-card">
-              <div class="quizz-clauses-card-text">
-                <p id="choice3-text">Choix 3</p>
-              </div>
-            </div>
-            <div id="choice4" class="quizz-clauses-card">
-              <div class="quizz-clauses-card-text">
-                <p id="choice4-text">Choix 4</p>
-              </div>
-            </div>
+            <!--Div à cacher si le quizz n'a pas commencer-->
           </div>
-          <div class="quizz-footer">
-            <div class="quizz-footer-timer">
-              <p id="number-question">0</p>
-            </div>
-          </div>
-          <!--Div à cacher si le quizz n'a pas commencer-->
         </div>
+        
       </section>
-      <div id="poke-new" class="poke-image-right">
+      <div id="poke-new" class="poke-image-left">
         <!-- zone pokebanner -->
       </div>
       <section id="form-contact">
-        <div class="bg-herbe-left"></div>
-        <h2 class="title-type-01">CONTACT</h2>
+        <div class="bg-herbe-right"></div>
+        <h2 class="title-type-02">CONTACT</h2>
         <div></div>
         <article>
-          <p>formulaire de contact en cours de production...</p>
-        </article>
+            <section id="form-contact">
+                <div class="formulaire">
+                    <form method="POST"
+                      autocomplete="off" preventD>
+                      <h1><img src="./assets/pikachu_icon-icons.com_67535.svg">Send us a comment<img src="./assets/pikachu_icon-icons.com_67535.svg"></h1>
+                                
+                      <div class="form-inner">
+                        <article>
+                          <label for="firstName">First name</label>
+                          <input type="text" name="firstName" id="firstName" placeholder="Sacha du Bourg-Palette" required />
+                        </article>
+              
+                        <article>
+                          <label for="lastName">Last name</label>
+                          <input type="text" name="lastName" id="lastName" placeholder="Ketchum qui perd toujours la ligue pokémon" required />
+                        </article>
+                        <article>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="pikachu@wildcodeschool.com" required />
+                          </article>
+                
+                          <article>
+                            <label for="comment">Type your comment:</label>
+                            <textarea placeholder="Gotta catch'em all !" id="comment" name="comment" required ></textarea>
+                          </article>
+                        </div>
+               
+                        <button id ="form-btn" class="btn" type="submit">Send your Pokecomment</button>
+                      </form>
+                    </div>
       </section>
     </main>
-    <footer>
-      <!-- en cour de maintenance -->
+    <footer class="footer">
+      <div class="footer-main-content">
+        <div class="footer-sources">
+            <h3>Médias et sources</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab cumque suscipit, repellat quia dicta distinctio, magnam voluptas commodi.</p>
+        </div>
+        <div class="footer-social">
+          <h3>Suivez nous</h3>
+          <div class="footer-social-content">
+            <ul class="footer-links">
+                <li data-platform="linkedin" class="footer-links-site"><i class="fa-brands fa-linkedin"></i></li>
+                <li data-platform="github" class="footer-links-site"><i class="fa-brands fa-github"></i></li>
+            </ul>
+            <div class="footer-students">
+                <ul class="footer-students-list">
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-img">
+          <div class="footer-img-content"></div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+          <p>© 2021 - Tous droits réservés</p>
+      </div>
     </footer>
     <div class="modal-popup">
       <div class="modal-popup-header">
@@ -309,5 +387,9 @@
     <script src="./scripts/quizz.js"></script>
     <script src="./scripts/popup.js"></script>
     <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/toggle.js"></script>
+    <script src="./scripts/footer.js"></script>
+    <script src="./scripts/pushPokemon.js"></script>
+    <script src="./scripts/preloader.js"></script>
   </body>
 </html>

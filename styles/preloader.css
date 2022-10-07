@@ -1,0 +1,52 @@
+video {
+    min-width: 320px;
+    width: 100vw;
+    height: 80%;
+   margin-bottom: 50vh;
+
+}
+
+.preloader{
+    z-index: 2000;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.buttonPrelo {
+    display: flex;
+    position: sticky;
+    color: white;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    /* transform: translateX(-50%); */
+    padding: 1.5rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    box-shadow: 0 0 6px white;
+    cursor: pointer;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+.buttonPrelo:hover {
+letter-spacing: 0.25em;
+background-color: var(--darkColor);
+}
+
+@media screen and (min-width: 900px){
+    video {
+       margin-top: 10px;
+        width: 60%;
+        height: 70%;
+        margin-left: 20%;
+    }
+    /* .buttonPrelo {
+        transform: translateX(-45%);
+    } */
+}

@@ -1,4 +1,70 @@
    /* Positionnement des pokemons */
+   /* dark-mode */
+    /* body.dark .poke-image-right {
+    position: absolute;
+    max-height: 40%;
+    height: 200px;
+    width: 40%;
+    z-index: 10;
+    right: 0;
+    filter: invert(1);
+}   */
+
+/* body.dark .poke-image-left {
+    position: absolute;
+    max-height: 40%;
+    height: 200px;
+    width: 40%;
+    z-index: 10;
+    left: 0;
+    filter: invert(1);
+}  */
+
+body.dark #poke-pikachu {
+    background-image: url(../assets/pokemon-raichu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.5rem;
+    margin-right: 0.5rem;
+    margin-left: auto;
+}
+
+body.dark #poke-ptitard {
+    background-image: url(../assets/pokemon-tartard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.8rem;
+    margin-left: 2.5rem;
+}
+
+body.dark #poke-porygon {
+    background-image: url(../assets/pokemon-porygon2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -5rem;
+}
+body.dark #poke-rondoudou {
+    background-image: url(../assets/pokemon-grodoudou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -3.8rem;
+    margin-left: 4.3rem;
+}
+body.dark #poke-dracaufeu {
+    background-image: url(../assets/pokemon-tortank.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2.8rem;
+    margin-right: 1rem;
+}
+body.dark #poke-new {
+    background-image: url(../assets/pokemon-mewtwo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -1.5rem;
+}
+
+
    .poke-image-left, .poke-image-right {
     position: absolute;
     max-height: 40%;
