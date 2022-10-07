@@ -145,15 +145,28 @@ const quizzStarted = (isStarted) => {
 quizzStarted(false); //le quizz n'a pas commencé
 let currentQuestion = 1; //question actuelle
 let currentHealth = 6; //nombre de vies actuelles
-const music = new Audio('./assets/quizz/music/quizz-music.mp3');
+const music = new Audio('./assets/quizz/music/fight-music.mp3');
 const startButton = document.querySelector(".quizz-start");
+const muteButton = document.querySelector(".quizz-footer-mute");
+const iconMuteButton = document.querySelector("#quizz-footer-mute-icon");
 
 startButton.addEventListener("click", () => { // quand on appuie sur start
     quizzStarted(true); // on commence le quizz
     displayHealth(6); // on affiche les 6 vies de départ
     displayQuestionClauses(questions,0,0); // on affiche la première question
-    //music.play();
+    music.play();
+    music.loop = true;
+});
 
+muteButton.addEventListener("click", () => { // quand on appuie sur mute
+    if(music.muted){
+        iconMuteButton.className = "fa-sharp fa-solid fa-volume-high";
+        music.muted = false;
+    }
+    else{
+        iconMuteButton.className = "fa-solid fa-volume-xmark";
+        music.muted = true;
+    }
 });
 
 const cards = document.querySelectorAll(".quizz-clauses-card"); // on récupère les 4 boutons

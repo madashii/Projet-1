@@ -5,3 +5,6 @@ toggle.addEventListener('click', () => {
     
 })
 
+document.getElementById("form-btn").addEventListener("click", function(event){
+    event.preventDefault()
+  });

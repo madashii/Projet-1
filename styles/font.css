@@ -1,0 +1,10 @@
+/* fichier contenant les modifs de style de la police d'écriture (seulement le font-family, style, weight). */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-italic {
+    font-style: italic;
+}

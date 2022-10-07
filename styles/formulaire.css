@@ -67,6 +67,7 @@
   outline: none;
   border-radius: 0.625rem;
   transition: opacity 0.2s ease-in-out;
+  
 }
 
 .formulaire form .btn:hover {
