@@ -1,0 +1,84 @@
+.formulaire {
+  background-color: #c52020;
+  padding: 1.25rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.formulaire form h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+}
+
+.formulaire form h1 img {
+  margin: 1rem;
+}
+.formulaire form .form-inner {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.formulaire form .form-inner article {
+  margin-top: 1.25rem;
+  width: 90%;
+}
+
+.formulaire form .form-inner article textarea {
+  width: 100%;
+  min-height: 200px;
+}
+
+.formulaire form label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.formulaire form input {
+  border: 2px solid #3f3d5691;
+  border-radius: 0.6rem;
+  outline: none;
+  padding: 0.625rem 1.25rem;
+  width: 100%;
+}
+
+.formulaire form input:focus {
+  border-color: #3f3d56;
+}
+
+.formulaire form .btn {
+  color: #fff;
+  padding: 0.625rem 3rem;
+  font-size: 1rem;
+  background-color: #3f3d56;
+  margin-top: 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 0.625rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.formulaire form .btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+#form-contact img {
+  width: 20px;
+  height: 30px;
+}
+#form-contact {
+  height: 900px;
+  color: #fff;
+}

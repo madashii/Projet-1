@@ -1,0 +1,133 @@
+
+
+.title {
+	margin-left: 10px;
+	font-size: 25px;
+	color: #000;
+	font-weight: bold;
+	margin-bottom: 25px;
+	
+}
+
+.item {
+	margin: 40px auto;
+	background-color: #fff;
+	box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+	transition: transform 0,3s;
+	transform: translate3d(0, -1px, 0);
+	border-radius: 2rem;
+	width: 80%;
+}
+
+.item:hover {
+	transform: translate3d(0, -10px, 0);
+}
+
+.item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.item-body {
+	padding: 25px;
+
+}
+
+
+.item-title {
+	font-style: 24px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #232323;
+
+}
+
+.item-description {
+	color: #585858;
+}
+
+.items {
+	position: relative;
+}
+/* https://www.youtube.com/watch?v=HsQUjVMfJk8 Explication de la position absolute et relative. 
+Résumé : Un élément enfant en position absolute, pourrra se déplacer dans l'élement parent en position relative. Ex : un petit carré se 
+déplaçant dans un grand carré. petit = enfant grand = parent */
+/*Carousel */
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel-container {
+	transition: transform 0.3s;
+	transform: translate3d(0, 0 , 0);
+}
+
+.carousel-item {
+	float: left;
+}
+
+.carousel-container::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+
+.carousel-next, .carousel-prev {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #fff url(../assets/img/chev-droit.png) center center no-repeat;
+	background-size: 20px 20px;
+	border-radius: 50% ;
+	top: 50%;
+	margin-top: -20px;
+	right: 0;
+	box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a ;
+	cursor: pointer;
+	transition: transform 0,3s, opacity 0.3s;
+}
+
+.carousel-next:hover, .carousel-prev:hover {
+transform: scale(1.2);
+}
+
+.carousel-prev {
+	background-image: url(../assets/img/chev-gauche.png);
+	right: auto;
+	left: 0;
+}
+
+.carousel-prev-hidden,  .carousel-next-hidden {
+	opacity: 0;
+}
+/* .chevron {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+
+.chevron.right {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left {
+	left: 0.25em;
+	transform: rotate(-135deg);
+} */
