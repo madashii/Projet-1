@@ -25,10 +25,4 @@ buttonClosePopup.addEventListener('click', () => {
     displayPopup(false);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        displayPopup(true);
-    }, 10000);
-});
-
 
