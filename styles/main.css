@@ -88,6 +88,8 @@ p {
 .title-type-02 ~ article {
     color: var(--lightColor);
 }
+
+
 /* Partie ACCUEIL */
 #section-background {
     background-image: url(../assets/bg-satoshi-tajiri.jpg);

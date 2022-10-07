@@ -6,21 +6,22 @@
     --darkTwoColor: #A80000;
     --fontColorLight: #FFF;
     --fontColorDark: #000;
-    --nightColor: rgba(55, 30, 145, 0.884);
+    --nightColor: rgb(76, 32, 235);
+    --otherColor:#0e3a5e;
     
     /* Var quizz */
-    --width-quizz: 40%;
+    --width-quizz: 70%;
 }
 
 
 body.dark {
-    --lighting-color:#402f4e;
+    --lightColor:#140e19;
     --darkColor: #0e3a5e;
-    --greyColor: #0978b4;
+    --greyColor: #0e3a5e;
     --darkTwoColor: #08c0ff;
-    --fontColorLight: #0ffff8;
+    --fontColorLight: #FFF;
     --fontColorDark: #FFF;
-        
+    
 }
 
 
@@ -32,7 +33,7 @@ input[type="checkbox"]{
     height: 40px;
     border-radius: 50px;
     outline: none;
-    background-color: brown;
+    background-color: var(--otherColor);
 
 }
 
@@ -58,5 +59,6 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:checked{
-    background-color: var(--nightColor);
+    background-color: brown;
+    
 }
