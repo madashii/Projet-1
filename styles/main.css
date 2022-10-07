@@ -6,7 +6,6 @@ body, html{
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: sans-serif;
     z-index: 0;
     background-color: var(--darkColor);
     scroll-behavior: smooth;
@@ -261,9 +260,11 @@ p {
 }
 
 /* Partie OEUVRES */
+
 /* Partie QUIZ */
-#zone-quiz{
-    padding:2rem 0;
+.rule-quiz {
+    width: 50%;
+    align-self: center;
 }
 /* Partie CONTACT */
 #form-contact {
